@@ -18,7 +18,8 @@ class Post::Image
 
   def path
     path = "images/posts/#{post.id}_#{post.updated_at.to_i}.png"
-    image.write(path) unless File.exist?(Rails.root.join('public', path))
+    local_path = Rails.root.join('public', path)
+    image.write(local_path) unless File.exist?(local_path)
     path
   end
 
