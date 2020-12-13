@@ -1,5 +1,5 @@
 <%
-  set_meta_tags og: { title: "post##{@post.id}", description: @post.body, image: "#{request.base_url}/#{@post.image_path}" }
+  set_meta_tags title: "post##{@post.id}", og: { title: "post##{@post.id}", description: @post.body, image: "#{request.base_url}/#{@post.image_path}" }
 %>
 
 <p id="notice"><%= notice %></p>
