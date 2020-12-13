@@ -1,5 +1,5 @@
 <%
-  set_meta_tags title: "post##{@post.id}", og: { title: "post##{@post.id}", description: @post.body, image: "#{request.base_url}/#{@post.image_path}" }, twitter: { card: :summary_large_image }
+  set_meta_tags title: "post##{@post.id}", og: { title: "post##{@post.id}", description: @post.body, image: "#{request.base_url}/#{@post.image_path}" }, twitter: { card: 'summary_large_image' }
 %>
 
 <p id="notice"><%= notice %></p>
