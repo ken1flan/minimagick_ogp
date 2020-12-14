@@ -12,6 +12,9 @@
   </head>
 
   <body>
+    <% if ENV['PREVENT_SPAM'] %>
+      <p style='background-color: #FDC'>すみません、問題のある投稿をされても面倒が見きれないので、作成や編集はできないようにしてあります。</p>
+    <% end %>
     <%= yield %>
   </body>
 </html>

@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :redirect_to_index, except: [:index, :show]
 
   # GET /posts
   # GET /posts.json
@@ -70,5 +71,9 @@ class PostsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def post_params
       params.require(:post).permit(:body)
+    end
+
+    def redirect_to_index
+      redirect_to :posts if ENV['PREVENT_SPAM']
     end
 end
