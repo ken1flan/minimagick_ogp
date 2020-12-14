@@ -1,12 +1,12 @@
 class Post::Image
   FRAME_IMAGE_PATH = Rails.root.join('app/assets/images/flame.png')
-  FONT_SIZE = 32
+  FONT_SIZE = 25
   INTERLINE_SPACING = (FONT_SIZE * 0.5).round
   COLOR_CODE = '#252828'
   START_X = 65
   START_Y = 60
-  MAX_ROWS = 6
-  COLS = 16
+  MAX_ROWS = 5
+  COLS = 20
   ROWS = 10
   OMMIT_MESSAGE = '…（省略させてください。）'
 
